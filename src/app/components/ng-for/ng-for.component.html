@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <th>Sr No</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Contact Number</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of emplyeeArray; let idx=index">
+            <td>{{idx+1}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.city}}</td>
+            <td>{{emp.contactNo}}</td>
+        </tr>
+    </tbody>
+</table>

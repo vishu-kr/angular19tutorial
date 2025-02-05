@@ -1,0 +1,10 @@
+<div class="div" *ngIf="div1visible">Div1</div>
+<button class="danger" (click)="hideDiv1()">Hide</button>
+<button class="success" (click)="showDiv1()">Show</button>
+<br>
+<br>
+
+<!-- Now I am going to take 2 input, if both input is same the, I am going to show Div2 box -->
+<div class="div" *ngIf="number1==number2">Div2</div>
+<input type="text" [(ngModel)]="number1"/>
+<input type="text" [(ngModel)]="number2"/>
