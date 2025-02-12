@@ -1,0 +1,10 @@
+<div class="div1" [ngStyle]="{'background-color': isChecked == true? 'teal':'blue'}">
+    Div1
+</div>
+<div>
+    <input type="checkbox" [(ngModel)]="isChecked">
+</div>
+
+<div [ngStyle]="cssAsObject">
+    div2
+</div>

@@ -2,3 +2,31 @@
     margin: 0;
     padding: 0;
 }
+
+nav{
+    box-shadow: 3px 5px 5px rgba(0,0 ,0 , 0.1);
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
