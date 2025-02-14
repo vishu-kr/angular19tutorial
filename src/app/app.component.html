@@ -11,6 +11,12 @@
                     <li><a routerLink="reactive-form" (click)="openSubMenu()">Reactive Form</a></li>
                 </ul></div>
             </li>
+            <li><a (click)="openAPISubMenu()">API</a>
+                <div *ngIf="subAPIMenu" class="submenu"><ul>
+                    <li><a routerLink="get-api" (click)="openAPISubMenu()">Get API</a></li>
+                    <li><a>Post API</a></li>
+                </ul></div>
+            </li>
         </ul>
     </nav>
     <router-outlet></router-outlet>
