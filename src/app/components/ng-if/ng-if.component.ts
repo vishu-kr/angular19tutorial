@@ -14,9 +14,9 @@ export class NgIfComponent {
   number2:string = '';
 
   hideDiv1(){
-    this.div1visible = !this.div1visible
+    this.div1visible = false
   }
   showDiv1(){
-    this.div1visible = !this.div1visible
+    this.div1visible = true
   }
 }

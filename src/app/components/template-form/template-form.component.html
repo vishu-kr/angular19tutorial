@@ -1,0 +1,47 @@
+<!-- first name, last name, username, city, state, pincode, submit button -->
+<form #form="ngForm">
+    <div>
+        <label >First Name <span class="validation">*</span></label>
+        <input type="text" required #fname="ngModel" name="firstName" [(ngModel)]="userObj.firstName">
+        <div class="validation">
+            @if(fname.errors?.['required'] && fname.touched){
+                <span>This is required</span>
+            }
+        </div>
+    </div>
+    <div>
+        <label >Last Name</label>
+        <input type="text" required minlength="4" name="lastName" #lname="ngModel" [(ngModel)]="userObj.lastName">
+        <div class="validation">
+            <span *ngIf="lname.errors?.['required'] && lname.touched">This is required</span>
+            <span *ngIf="lname.errors?.['minlength'] && lname.touched">Min 4 char is required</span>
+        </div>
+    </div>
+    <div>
+        <label >UserName</label>
+        <input type="text" name="userName" [(ngModel)]="userObj.userName">
+    </div>
+    <div>
+        <label >City</label>
+        <input type="text" name="city" [(ngModel)]="userObj.city">
+    </div>
+    <div>
+        <label >State</label>
+        <select name="state" [(ngModel)]="userObj.state">
+            <option disabled value="">Choose..</option>
+            <option>Bihar</option>
+            <option>Karnakata</option>
+            <option>Maharashtra</option>
+            <option>Kerela</option>
+            <option>Mizoram</option>
+        </select>
+    </div>
+    <div>
+        <label> Zip Code</label>
+        <input type="number" name="zipCode" [(ngModel)]="userObj.zipCode">
+    </div>
+    <div>
+        <input type="checkbox" name="isTermsAgree" [(ngModel)]="userObj.isTermsAgree">
+    </div>
+    <button type="submit" [disabled]="form.invalid" (click)="onSave()">Submit</button>
+</form>
